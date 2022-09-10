@@ -1,1 +1,100 @@
-/* Write your CSS here */
+hr {
+  color: #cbd2d9;
+  height: 0.1rem;
+}
+
+.comments-app-bg-container {
+  height: 100vh;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Roboto';
+}
+
+.comments-header {
+  color: #1e293b;
+  font-size: 2.5rem;
+}
+
+.top-img-and-form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.comments-img {
+  width: 100%;
+}
+
+.form-content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-header {
+  color: #475569;
+  font-size: 1.2rem;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid #dee0e3;
+  border-radius: 0.4rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.form-textarea {
+  rows: 10;
+}
+
+.form-submit-button {
+  background-color: #0284c7;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.comments-container {
+  width: 100%;
+}
+
+.comments-count-container {
+  display: flex;
+  margin-left: 0.5rem;
+  align-items: center;
+}
+
+.comments-count {
+  padding: 0.5rem;
+  background-color: #0284c7;
+  color: #ffffff;
+  border-radius: 0.2rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.comments-header {
+  color: #7e858e;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .form-content-container {
+    width: 50%;
+  }
+
+  .comments-img {
+    width: 50%;
+  }
+}
