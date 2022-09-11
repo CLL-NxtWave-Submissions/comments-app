@@ -2,6 +2,8 @@ import {Component} from 'react'
 import {v4 as uuidv4} from 'uuid'
 import './index.css'
 
+import CommentItem from '../CommentItem'
+
 const initialContainerBackgroundClassNames = [
   'amber',
   'blue',
@@ -60,6 +62,42 @@ export default class Comments extends Component {
     })
   }
 
+  onCommentLikeToggle = toggledCommentId => {
+    this.setState(previousCommentsState => {
+      const {commentsList} = previousCommentsState
+
+      const updatedCommentsList = commentsList.map(commentsListItem => {
+        if (commentsListItem.commentId === toggledCommentId) {
+          const updatedCommentsListItem = {
+            ...commentsListItem,
+            isLiked: !commentsListItem.isLiked,
+          }
+          return updatedCommentsListItem
+        }
+
+        return commentsListItem
+      })
+
+      return {
+        commentsList: updatedCommentsList,
+      }
+    })
+  }
+
+  onCommentDelete = toBeDeletedCommentId => {
+    this.setState(previousCommentsState => {
+      const {commentsList} = previousCommentsState
+
+      const updatedCommentsList = commentsList.filter(
+        commentsListItem => commentsListItem.commentId !== toBeDeletedCommentId,
+      )
+
+      return {
+        commentsList: updatedCommentsList,
+      }
+    })
+  }
+
   render() {
     const {name, comment, commentsList} = this.state
 
@@ -109,6 +147,16 @@ export default class Comments extends Component {
               <p className="comments-count">{commentsList.length}</p>
               <p className="comments-count-header">Comments</p>
             </div>
+            {commentsList.map(commentListItem => (
+              <CommentItem
+                itemData={commentListItem}
+                likeActionHandler={this.onCommentLikeToggle}
+                deleteActionHandler={this.onCommentDelete}
+                backgroundColorClassNamesList={
+                  initialContainerBackgroundClassNames
+                }
+              />
+            ))}
           </div>
         </div>
       </div>
