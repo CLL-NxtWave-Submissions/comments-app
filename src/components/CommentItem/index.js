@@ -74,6 +74,7 @@ const CommentItem = props => {
         </div>
 
         <button
+          //   testid="delete"
           type="button"
           className="comment-item-delete-action-button"
           onClick={onClickCommentDeleteButton}

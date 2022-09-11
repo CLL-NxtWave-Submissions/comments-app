@@ -116,12 +116,12 @@ export default class Comments extends Component {
           <div className="top-img-and-form-container">
             <img
               className="comments-img"
-              src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png "
+              src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
               alt="comments"
             />
             <img
               className="comments-img-in-row"
-              src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png "
+              src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
               alt="comments"
             />
             <form
