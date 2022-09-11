@@ -1,5 +1,5 @@
 hr {
-  color: #cbd2d9;
+  color: #94a3b8;
   height: 0.1rem;
 }
 
@@ -87,6 +87,12 @@ hr {
 .comments-header {
   color: #7e858e;
   font-size: 0.8rem;
+}
+
+.horizontal-line-separator {
+  border: none;
+  border-top: 0.1rem solid #94a3b8;
+  height: 0.1rem;
 }
 
 @media (min-width: 768px) {
