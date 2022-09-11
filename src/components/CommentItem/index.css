@@ -94,6 +94,12 @@
 
 .comment-item-like-text {
   font-size: 1rem;
+  color: #7e858e;
+}
+
+.comment-item-liked-text {
+  font-size: 1rem;
+  color: #0284c7;
 }
 
 .comment-item-delete-action-button {
