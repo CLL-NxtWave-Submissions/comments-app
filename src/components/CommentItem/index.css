@@ -109,6 +109,6 @@
 
 .horizontal-line-separator {
   border: none;
-  border-top: 0.1rem solid #94a3b8;
-  height: 0.1rem;
+  border-top: 0.1rem solid #dee0e3;
+  width: 100%;
 }
