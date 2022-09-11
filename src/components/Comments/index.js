@@ -44,6 +44,22 @@ export default class Comments extends Component {
     })
   }
 
+  onNameChange = nameChangeEvent => {
+    const updatedName = nameChangeEvent.target.value
+
+    this.setState({
+      name: updatedName,
+    })
+  }
+
+  onCommentChange = commentChangeEvent => {
+    const updatedComment = commentChangeEvent.target.value
+
+    this.setState({
+      comment: updatedComment,
+    })
+  }
+
   render() {
     const {name, comment, commentsList} = this.state
 
