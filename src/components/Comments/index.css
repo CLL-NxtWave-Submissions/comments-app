@@ -1,10 +1,5 @@
-hr {
-  color: #94a3b8;
-  height: 0.1rem;
-}
-
 .comments-app-bg-container {
-  height: 100vh;
+  height: 100%;
   padding: 1.5rem;
   display: flex;
   justify-content: center;
@@ -20,7 +15,7 @@ hr {
 
 .comments-header {
   color: #1e293b;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .top-img-and-form-container {
@@ -31,17 +26,25 @@ hr {
 
 .comments-img {
   width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.comments-img-in-row {
+  display: none;
 }
 
 .form-content-container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: flex-start;
 }
 
 .form-header {
   color: #475569;
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .form-input,
@@ -49,23 +52,40 @@ hr {
   padding: 0.5rem 1rem;
   border: 0.1rem solid #dee0e3;
   border-radius: 0.4rem;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   cursor: pointer;
   outline: none;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .form-textarea {
-  rows: 10;
+  height: 10rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-submit-button {
   background-color: #0284c7;
   padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.horizontal-line-separator {
+  border: none;
+  border-top: 0.1rem solid #dee0e3;
+  width: 100%;
 }
 
 .comments-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -76,31 +96,40 @@ hr {
 }
 
 .comments-count {
-  padding: 0.5rem;
+  padding: 0.25rem 0.7rem;
   background-color: #0284c7;
   color: #ffffff;
   border-radius: 0.2rem;
   margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.comments-count-header {
+  color: #1e293b;
   font-size: 1rem;
-}
-
-.comments-header {
-  color: #7e858e;
-  font-size: 0.8rem;
-}
-
-.horizontal-line-separator {
-  border: none;
-  border-top: 0.1rem solid #94a3b8;
-  height: 0.1rem;
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
-  .form-content-container {
-    width: 50%;
+  .top-img-and-form-container {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .comments-img {
+    display: none;
+  }
+
+  .comments-img-in-row {
+    display: inline;
     width: 50%;
+    order: 1;
+    padding: 1rem;
+  }
+
+  .form-content-container {
+    width: 50%;
+    margin-right: 10rem;
   }
 }

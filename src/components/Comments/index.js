@@ -73,6 +73,11 @@ export default class Comments extends Component {
               src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png "
               alt="comments"
             />
+            <img
+              className="comments-img-in-row"
+              src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png "
+              alt="comments"
+            />
             <form
               className="form-content-container"
               onSubmit={this.onAddComment}
@@ -98,11 +103,11 @@ export default class Comments extends Component {
               </button>
             </form>
           </div>
-          <hr />
+          <hr className="horizontal-line-separator" />
           <div className="comments-container">
             <div className="comments-count-container">
               <p className="comments-count">{commentsList.length}</p>
-              <p className="comments-header">Comments</p>
+              <p className="comments-count-header">Comments</p>
             </div>
           </div>
         </div>
