@@ -14,11 +14,6 @@ const CommentItem = props => {
   } = itemData
 
   const timeSinceCommentCreationAsText = formatDistanceToNow(creationDateTime)
-  const classNameStringForAuthorNameInitialElement = `comment-item-author-initial ${backgroundColorClassName}`
-  const classNameStringForLikeTextElement = isLiked
-    ? 'comment-item-liked-text'
-    : 'comment-item-like-text'
-
   const authorNameInitial = authorName.slice(0, 1).toUpperCase()
 
   const onClickCommentLikeButton = () => likeActionHandler(commentId)
@@ -28,7 +23,9 @@ const CommentItem = props => {
     <li className="comment-item-container">
       <div className="comment-item-content-container">
         <div className="comment-item-author-initial-container">
-          <p className={classNameStringForAuthorNameInitialElement}>
+          <p
+            className={`comment-item-author-initial ${backgroundColorClassName}`}
+          >
             {authorNameInitial}
           </p>
         </div>
@@ -47,27 +44,33 @@ const CommentItem = props => {
 
       <div className="comment-item-actions-container">
         <div className="comment-item-like-action-container">
+          {isLiked ? (
+            <img
+              className="comment-item-like-img"
+              src="https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png"
+              alt="like"
+            />
+          ) : (
+            <img
+              className="comment-item-like-img"
+              src="https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png"
+              alt="like"
+            />
+          )}
+
           <button
             type="button"
             className="comment-item-like-action-button"
             onClick={onClickCommentLikeButton}
           >
-            {isLiked ? (
-              <img
-                className="comment-item-like-img"
-                src="https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png"
-                alt="like"
-              />
-            ) : (
-              <img
-                className="comment-item-like-img"
-                src="https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png"
-                alt="like"
-              />
-            )}
+            <p
+              className={
+                isLiked ? 'comment-item-liked-text' : 'comment-item-like-text'
+              }
+            >
+              Like
+            </p>
           </button>
-
-          <p className={classNameStringForLikeTextElement}>Like</p>
         </div>
 
         <button
