@@ -155,13 +155,16 @@ export default class Comments extends Component {
               <p className="comments-count">{commentsList.length}</p>
               <p className="comments-count-header">Comments</p>
             </div>
-            {commentsList.map(commentListItem => (
-              <CommentItem
-                itemData={commentListItem}
-                likeActionHandler={this.onCommentLikeToggle}
-                deleteActionHandler={this.onCommentDelete}
-              />
-            ))}
+            <ul className="comment-items-container">
+              {commentsList.map(commentListItem => (
+                <CommentItem
+                  key={commentListItem.commentId}
+                  itemData={commentListItem}
+                  likeActionHandler={this.onCommentLikeToggle}
+                  deleteActionHandler={this.onCommentDelete}
+                />
+              ))}
+            </ul>
           </div>
         </div>
       </div>

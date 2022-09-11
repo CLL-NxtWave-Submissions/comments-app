@@ -110,6 +110,11 @@
   font-weight: 600;
 }
 
+.comment-items-container {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 @media (min-width: 768px) {
   .top-img-and-form-container {
     flex-direction: row;
