@@ -27,12 +27,20 @@ export default class Comments extends Component {
     this.setState(prevCommentsState => {
       const {name, comment, commentsList} = prevCommentsState
 
+      const randomClassNamesListIndex =
+        Math.floor(Math.random() * 100) %
+        initialContainerBackgroundClassNames.length
+
+      const randomBackgroundColorClassName =
+        initialContainerBackgroundClassNames[randomClassNamesListIndex]
+
       const newComment = {
         commentId: uuidv4(),
         authorName: name,
         postedComment: comment,
         creationDateTime: new Date(),
         isLiked: false,
+        backgroundColorClassName: randomBackgroundColorClassName,
       }
 
       const updatedCommentsList = [...commentsList, newComment]
@@ -152,9 +160,6 @@ export default class Comments extends Component {
                 itemData={commentListItem}
                 likeActionHandler={this.onCommentLikeToggle}
                 deleteActionHandler={this.onCommentDelete}
-                backgroundColorClassNamesList={
-                  initialContainerBackgroundClassNames
-                }
               />
             ))}
           </div>
