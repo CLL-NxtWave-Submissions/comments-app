@@ -119,11 +119,6 @@ export default class Comments extends Component {
               src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
               alt="comments"
             />
-            <img
-              className="comments-img-in-row"
-              src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
-              alt="comments"
-            />
             <form
               className="form-content-container"
               onSubmit={this.onAddComment}

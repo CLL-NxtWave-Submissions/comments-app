@@ -30,15 +30,12 @@
   margin-bottom: 1rem;
 }
 
-.comments-img-in-row {
-  display: none;
-}
-
 .form-content-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: flex-start;
+  flex-grow: 1;
 }
 
 .form-header {
@@ -123,11 +120,6 @@
   }
 
   .comments-img {
-    display: none;
-  }
-
-  .comments-img-in-row {
-    display: inline;
     width: 50%;
     order: 1;
     padding: 1rem;
